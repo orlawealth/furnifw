@@ -1,0 +1,14 @@
+[12-Apr-2020 21:48:34 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/experts/public_html/core/init.php on line 2
+[12-Apr-2020 21:48:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/core/admin_func.php on line 23
+[12-Apr-2020 21:48:36 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/experts/public_html/core/init.php on line 2
+[12-Apr-2020 21:48:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/core/admin_func.php on line 23
+[12-Apr-2020 21:48:36 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/admin/delete_user.php on line 19
+[12-Apr-2020 23:52:53 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/experts/public_html/core/init.php on line 2
+[12-Apr-2020 23:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/core/admin_func.php on line 23
+[12-Apr-2020 23:52:53 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/admin/delete_user.php on line 19
+[12-Apr-2020 23:55:23 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/experts/public_html/core/init.php on line 2
+[12-Apr-2020 23:55:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/core/admin_func.php on line 23
+[12-Apr-2020 23:55:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/admin/delete_user.php on line 27
+[12-Apr-2020 23:56:22 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/experts/public_html/core/init.php on line 2
+[12-Apr-2020 23:56:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/delete_user.php:1) in /home/experts/public_html/core/admin_func.php on line 23
+[13-Apr-2020 00:15:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/experts/public_html/admin/add_resource.php:39) in /home/experts/public_html/admin/add_resource.php on line 42
