@@ -12,7 +12,7 @@
 							<div class="intro-excerpt">
 								<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
 								<p class="mb-4">From relaxing with a morning brew to late-night movie marathons, sit back, relax and enjoy comfort designed for every moment of the day, every day.</p>
-								<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
+								<p><a href="shop.php" class="btn btn-secondary me-2">Shop Now</a><a href="#" class="btn btn-white-outline">Explore</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">

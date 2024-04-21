@@ -15,8 +15,14 @@
 		<link href="css/tiny-slider.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<title> <?php echo isset($page_title) ? $page_title :" Furni"; ?> </title>
-			
-	</head>
+
+	<link rel="manifest" href="manifest.json">
+  <!-- ios support -->
+    <link rel="apple-touch-icon" href="icons/icon-96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#00695c" >
+    <meta name="theme-color" content="#00695c" >
+  <!-- ios support -->
+</head>
 
 	<body>
 
@@ -24,7 +30,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+				<a class="navbar-brand" href="index.php">Furni<span>.</span></a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
