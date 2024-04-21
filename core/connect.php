@@ -8,7 +8,7 @@
 		$conn = new PDO("mysql:host=$hostname; dbname=$database", $username, $password);
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	} catch (PDOException $e) {
-		echo "couldnt connect to database" .$e->getMwssage();
+		echo "couldnt connect to database" .$e->getMessage();
 	}
 	$GLOBALS['connect_database'] = mysqli_connect($hostname, $username, $password, $database);
 ?>
