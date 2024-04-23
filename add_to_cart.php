@@ -7,7 +7,7 @@
          // Check if product is coming or not
         if (isset($_POST['code']) && $_POST['code']!="") {
             $code = $_POST['code'];
-            
+           // die($code . "is code");
             
             $result = mysqli_query($GLOBALS['connect_database'], "SELECT * FROM `product` WHERE `product_code` = '$code' ");
            // $result = mysqli_query($con,"SELECT * FROM 'product' WHERE 'product_id'='$code'");
@@ -30,18 +30,18 @@
                 'image'=>$image)
             );
            
-            if(empty($_SESSION["shopping_cart"])) {
-                $_SESSION["shopping_cart"] = $cartArray;
+            if(empty($_SESSION["shopping_cartfw"])) {
+                $_SESSION["shopping_cartfw"] = $cartArray;
                 $status = "<div class='box' style='color: green;'>Product is added to your cart!</div>";
                 
             }else{
-                $array_keys = array_keys($_SESSION["shopping_cart"]);
+                $array_keys = array_keys($_SESSION["shopping_cartfw"]);
                 if(in_array($code,$array_keys)) {
                     $status = "<div class='box' style='color:red;'>
                     Product is already added to your cart!</div>";	
                     
                 }else {
-                $_SESSION["shopping_cart"] = array_merge($_SESSION["shopping_cart"],$cartArray);
+                $_SESSION["shopping_cartfw"] = array_merge($_SESSION["shopping_cartfw"],$cartArray);
                 $status = "<div class='box' style='color:green;'>Product is added to your cart!</div>";
                 }
             
@@ -52,6 +52,7 @@
             $product_id = (int)$id;
             if (find_product_by_id($product_id)) {
                 $product = find_product_by_id($product_id);
+                 //s die($product['product_code'] . "is code");
             }else{
                 header("Location:shop.php");
             }

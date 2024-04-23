@@ -7,25 +7,25 @@
   //     session_start();
 
 	// header("location: shop.php");
-		 //die("log in successful");
+	// 	 die("log in successful");
      $status="";
      if (isset($_POST['action']) && $_POST['action']=="remove"){
-      if(!empty($_SESSION["shopping_cart"])) {
-        foreach($_SESSION["shopping_cart"] as $key => $value) {
+      if(!empty($_SESSION["shopping_cartfw"])) {
+        foreach($_SESSION["shopping_cartfw"] as $key => $value) {
           if($_POST["code"] == $key){
-          unset($_SESSION["shopping_cart"][$key]);
+          unset($_SESSION["shopping_cartfw"][$key]);
           $status = "<div class='box' style='color:red;'>
           Product is removed from your cart!</div>";
           }
-          if(empty($_SESSION["shopping_cart"]))
-            unset($_SESSION["shopping_cart"]);
+          if(empty($_SESSION["shopping_cartfw"]))
+            unset($_SESSION["shopping_cartfw"]);
           
         }		
       }
     }
 
     if (isset($_POST['submit'])){
-      foreach($_SESSION["shopping_cart"] as &$value){
+      foreach($_SESSION["shopping_cartfw"] as &$value){
         if($value['code'] === $_POST["code"]){
             $value['quantity'] = $_POST["quantity"];
             break; // Stop the loop after we've found the product
@@ -63,7 +63,7 @@
                   </div>
                   <div class="site-blocks-table">
                 <?php
-                  if(isset($_SESSION["shopping_cart"])){
+                  if(isset($_SESSION["shopping_cartfw"])){
                       $total_price = 0;
                 ?>	
                     <table class="table">
@@ -78,7 +78,7 @@
                         </tr>
                       </thead>
                   <?php		
-                    foreach ($_SESSION["shopping_cart"] as $product){
+                    foreach ($_SESSION["shopping_cartfw"] as $product){
                   ?>
                       <tbody>
                         <tr>
@@ -135,7 +135,7 @@
               </div>
 
           <?php
-              if(isset($_SESSION["shopping_cart"])){
+              if(isset($_SESSION["shopping_cartfw"])){
           ?>	
               <div class="row">
                 <div class="col-md-6">

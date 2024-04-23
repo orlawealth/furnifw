@@ -37,7 +37,7 @@
 					// Adding order for existing guest customer 
 					$itemsordered = array();
 
-					foreach ($_SESSION["shopping_cart"] as $product) {
+					foreach ($_SESSION["shopping_cartfw"] as $product) {
 						$newItem = array(
 							'quantity' => $product['quantity'],
 							'product_id' => $product['product_id'],
@@ -52,7 +52,7 @@
 					$customer = find_customer_by_email($c_email);
 					$customer_id = $customer['customer_id'];
 					$subtotal_price = 0;
-					foreach ($_SESSION["shopping_cart"] as $product) {
+					foreach ($_SESSION["shopping_cartfw"] as $product) {
 						$subtotal_price += ($product["price"]*$product["quantity"]);
 							$tax_paid = 20/100 * $subtotal_price;
 							$total_price = $tax_paid + $subtotal_price;
@@ -68,7 +68,7 @@
 					if (add_customer_with_password($c_fname, $c_email, $addressArray, $c_phone, $c_password)) {
 						$itemsordered = array();
 
-						foreach ($_SESSION["shopping_cart"] as $product) {
+						foreach ($_SESSION["shopping_cartfw"] as $product) {
 							$newItem = array(
 								'quantity' => $product['quantity'],
 								'product_id' => $product['product_id'],
@@ -83,7 +83,7 @@
 						$customer = find_customer_by_email($c_email);
 						$customer_id = $customer['customer_id'];
 						$subtotal_price = 0;
-						foreach ($_SESSION["shopping_cart"] as $product) {
+						foreach ($_SESSION["shopping_cartfw"] as $product) {
 							$subtotal_price += ($product["price"]*$product["quantity"]);
 								$tax_paid = 20/100 * $subtotal_price;
 								$total_price = $tax_paid + $subtotal_price;
@@ -102,7 +102,7 @@
 					if (add_customer($c_fname, $c_email, $addressArray, $c_phone)) {
 						$itemsordered = array();
 
-						foreach ($_SESSION["shopping_cart"] as $product) {
+						foreach ($_SESSION["shopping_cartfw"] as $product) {
 							$newItem = array(
 								'quantity' => $product['quantity'],
 								'product_id' => $product['product_id'],
@@ -117,7 +117,7 @@
 						$customer = find_customer_by_email($c_email);
 						$customer_id = $customer['customer_id'];
 						$subtotal_price = 0;
-						foreach ($_SESSION["shopping_cart"] as $product) {
+						foreach ($_SESSION["shopping_cartfw"] as $product) {
 							$subtotal_price += ($product["price"]*$product["quantity"]);
 								$tax_paid = 20/100 * $subtotal_price;
 								$total_price = $tax_paid + $subtotal_price;
@@ -141,7 +141,7 @@
 		 if(isset($_POST['subm'])){
 		
 			die("inserted order");
-			foreach ($_SESSION["shopping_cart"] as $product){
+			foreach ($_SESSION["shopping_cartfw"] as $product){
 				$quantity = ($product['quantity']);
 				$product_id = ($product['product_id']);
 				add_order($product_id, $quantity);
@@ -252,7 +252,7 @@
 		            <div class="col-md-12">
 		              <h2 class="h3 mb-3 text-black">Your Order</h2>
 					  <?php
-                if(isset($_SESSION["shopping_cart"])){
+                if(isset($_SESSION["shopping_cartfw"])){
                       $subtotal_price = 0;
                 ?>	
 		              <div class="p-3 p-lg-5 border bg-white">
@@ -262,7 +262,7 @@
 		                    <th>Total</th>
 		                  </thead>
 					<?php		
-                		foreach ($_SESSION["shopping_cart"] as $product){
+                		foreach ($_SESSION["shopping_cartfw"] as $product){
                   	?>
                       
 		                  <tbody>

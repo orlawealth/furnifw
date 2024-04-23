@@ -1,6 +1,6 @@
 {
-    "name" : "Furni",
-    "short_name" : "Furni",
+    "name" : "Furnifw",
+    "short_name" : "Furnifw",
     "start_url" : "index.php",
     "display" : "standalone",
     "background_color" : "#4db6ac",
