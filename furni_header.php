@@ -1,5 +1,5 @@
 <?php
-	header("Content-Security-Policy: frame-ancestors 'none'");
+	header("Content-Security-Policy: frame-ancestors 'self'");
 ?>
 <!doctype html>
 <html lang="en">

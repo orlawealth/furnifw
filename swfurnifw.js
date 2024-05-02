@@ -79,3 +79,10 @@ self.addEventListener('fetch', evt => {
         })
     );
 });
+
+ // Update service worker on reload
+ self.addEventListener('message', event => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        self.skipWaiting();
+    }
+});
